@@ -21,7 +21,7 @@
        "Iowan Old Style", Palatino, Georgia, serif
        Helvetica, Arial, sans-serif
      =================================================================== */
-  --font: "Times New Roman", Times, Georgia, serif;
+  --font: Georgia, "Times New Roman", Times, serif;
 
   /* These two just point at --font so older rules keep working. Leave them. */
   --serif: var(--font);
