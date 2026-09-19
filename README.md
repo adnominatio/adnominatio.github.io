@@ -10,17 +10,26 @@ GitHub Pages.
 ## What's here
 
 ```
-index.html            About / bio (home page)
-cv.html               Curriculum vitae  (+ link to a CV PDF)
-publications.html     Publications, patents, thesis (+ PDF links)
-blog.html             "Writing" index — lists your posts
-posts/                Individual blog posts (one HTML file each)
-music.html            Compositions — UNLISTED (noindex, not in the nav)
-creative-writing.html Poetry/prose — UNLISTED (noindex, not in the nav)
-assets/styles.css     All the styling, in one file
-files/                Put PDFs, audio, etc. here to host them
-robots.txt, 404.html, .nojekyll   Housekeeping — leave them alone
+index.html              About / bio (home page)
+cv.html                 Curriculum vitae — text version + link to the PDF
+publications.html       Publications, patents, thesis (Scholar link + PDF links)
+blog.html               "Writing" index — lists your posts
+posts/                  Individual blog posts (one HTML file each)
+music.html              Compositions — UNLISTED. Sections: Choral, Voice and Piano
+creative-writing.html   Poetry & prose index — UNLISTED. Sections: Poetry, Long Form
+creative-writing/       One HTML page per poem / long-form piece (all noindex)
+assets/styles.css       All the styling, in one file (font, colors, spacing)
+files/                  Hosted downloads:
+  files/Glick_Casey_CV.pdf          your formatted CV
+  files/Glick_thesis_2017.pdf       your thesis
+  files/papers/                     paper PDFs (accepted manuscripts)
+  files/music/choral/               choral score PDFs
+  files/music/voice-and-piano/      voice-and-piano score PDFs
+robots.txt, 404.html, .nojekyll     Housekeeping — leave them alone
 ```
+
+Empty folders don't survive in Git, so each `files/` subfolder has a tiny
+`README.txt` placeholder — you can delete it once you've added a real file there.
 
 The two unlisted pages are the "hobby" areas. They carry a `noindex` tag and are
 not linked from any public page, so they won't appear when someone googles your
@@ -69,9 +78,19 @@ already links to `files/Glick_Casey_CV.pdf` and the publications page to
 edit the title/date/body, then add one line linking to it near the top of the
 list in `blog.html`.
 
-**Add a composition or poem:** edit `music.html` / `creative-writing.html`. Each
-has commented examples for linking out (MuseScore, Bandcamp), embedding a player,
-or hosting an audio/PDF file directly from `files/`.
+**Add your Google Scholar link:** on `publications.html`, find the
+`scholar.google.com/citations?user=YOUR_ID` link near the top and replace it
+with your real profile URL (open your Scholar profile and copy the address bar).
+
+**Add a composition:** edit `music.html`. Drop the score PDF in
+`files/music/choral/` or `files/music/voice-and-piano/`, then copy one of the
+`entry` blocks into the right section and point its link at your PDF (and/or add
+a MuseScore link). No separate page per piece — it's all on the one page.
+
+**Add a poem or long-form piece:** each one gets its own page. Copy
+`creative-writing/poem-example.html` (or `longform-example.html`), rename it,
+edit the text, then add one line linking to it in the matching section of
+`creative-writing.html`. Keep the `noindex` line in each new page.
 
 **The resiliency amendments (later):** when they're ready, the simplest path is a
 new `resiliency.html` — copy any existing page as a template. Decide then whether

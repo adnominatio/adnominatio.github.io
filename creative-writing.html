@@ -29,21 +29,28 @@
     can read it, but it won't surface in a search for your name.
   </div>
 
-  <!-- Add pieces as sections. For a poem, just paste it in a <div class="entry">.
-       For a longer work, link to a PDF you put in files/. -->
+  <!-- HOW THIS SECTION WORKS:
+       Each poem is its OWN page in the creative-writing/ folder. To add one,
+       copy creative-writing/poem-example.html, rename it, edit it, then add a
+       line to the Poetry list below. Long-form pieces work the same way
+       (creative-writing/longform-example.html). -->
 
-  <div class="entry" style="margin-top:2rem;">
-    <h3>Poem title</h3>
-    <p class="muted small">2010 · McKinney Writing Competition, First Place</p>
-    <p style="white-space:pre-line;">First line of the poem
-Second line of the poem
-Third line of the poem</p>
-  </div>
+  <h2>Poetry</h2>
+  <ul class="clean" style="margin-top:0.5rem;">
+    <li class="entry">
+      <div class="title"><a href="creative-writing/poem-example.html">Poem title</a></div>
+      <div class="muted small">2010 · a line of context</div>
+    </li>
+    <!-- Copy the <li> above for each poem. -->
+  </ul>
 
-  <div class="entry" style="margin-top:2rem;">
-    <h3>Another piece</h3>
-    <p><a href="files/some-story.pdf">Read as PDF →</a></p>
-  </div>
+  <h2>Long Form</h2>
+  <ul class="clean" style="margin-top:0.5rem;">
+    <li class="entry">
+      <div class="title"><a href="creative-writing/longform-example.html">Piece title</a></div>
+      <div class="muted small">Short description</div>
+    </li>
+  </ul>
 
 </main>
 

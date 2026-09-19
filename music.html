@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- KEEP THIS LINE: it tells Google & other search engines not to index this
-       page, so it won't appear when someone searches your name. -->
+  <!-- KEEP THIS LINE: keeps this page out of search results. -->
   <meta name="robots" content="noindex, nofollow">
   <title>Compositions — Casey Glick</title>
   <link rel="stylesheet" href="assets/styles.css">
@@ -27,31 +26,44 @@
   on the main site.</p>
 
   <div class="note small">
-    This page isn't linked from anywhere public and isn't indexed by search
-    engines. Anyone with the link can view it; it just won't turn up in a search
-    for your name.
+    Not linked publicly and not indexed by search engines — anyone with the link
+    can view it; it just won't turn up in a search for your name.
   </div>
 
-  <!-- WAYS TO PRESENT MUSIC:
-       (A) Link out to your public MuseScore / Bandcamp / SoundCloud pieces.
-       (B) Host audio files directly: drop an .mp3 in files/ and use <audio>.
-       (C) Embed a player (MuseScore/SoundCloud give you an <iframe> snippet).
-       Examples of each below — keep what you like, delete the rest. -->
+  <!-- FILES: put score PDFs in files/music/choral/ and
+       files/music/voice-and-piano/. Point each [PDF] link at that path.
+       Add a MuseScore link with the "Score on MuseScore" pattern.
+       To add a piece: copy one .entry block into the right section. -->
 
-  <h2>Pieces</h2>
+  <h2>Choral</h2>
 
   <div class="entry">
     <div class="title">Piece title</div>
-    <div class="muted small">Voicing · year · a line of context</div>
-    <p><a href="https://musescore.com/">Score on MuseScore</a></p>
-    <!-- Direct audio option: -->
-    <!-- <audio controls src="files/piece-title.mp3"></audio> -->
+    <div class="muted small">SATB · year · a line of context</div>
+    <p>
+      <a href="files/music/choral/piece-title.pdf">[Score PDF]</a>
+      &nbsp;·&nbsp;
+      <a href="https://musescore.com/">MuseScore</a>
+    </p>
   </div>
 
   <div class="entry">
-    <div class="title">Another piece</div>
+    <div class="title">Another choral piece</div>
     <div class="muted small">Voicing · year</div>
-    <p><a href="#">Listen / score →</a></p>
+    <p><a href="files/music/choral/another-piece.pdf">[Score PDF]</a></p>
+  </div>
+
+  <h2>Voice and Piano</h2>
+
+  <div class="entry">
+    <div class="title">Song title</div>
+    <div class="muted small">Voice &amp; piano · year</div>
+    <p>
+      <a href="files/music/voice-and-piano/song-title.pdf">[Score PDF]</a>
+      &nbsp;·&nbsp;
+      <a href="https://musescore.com/">MuseScore</a>
+    </p>
+    <!-- Direct audio option: <audio controls src="files/music/voice-and-piano/song.mp3"></audio> -->
   </div>
 
 </main>
