@@ -1,0 +1,196 @@
+/* =========================================================================
+   Casey Glick — personal academic site
+   One stylesheet for the whole site. Edit colors/spacing here in one place.
+   No external fonts or scripts: everything is self-contained (fast + private).
+   ========================================================================= */
+
+:root {
+  --content-width: 46rem;      /* comfortable reading measure */
+  --bg:        #fdfdfb;
+  --text:      #1c1c1a;
+  --muted:     #5a5a54;
+  --accent:    #2a4b7c;        /* deep slate blue for links */
+  --accent-2:  #7a2e2e;        /* reserved secondary accent */
+  --rule:      #e2e0d8;        /* hairline dividers */
+  --card:      #f5f4ee;
+  --serif: "Charter", "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:     #16171a;
+    --text:   #e6e4dd;
+    --muted:  #a3a199;
+    --accent: #8fb3e0;
+    --accent-2: #d99a9a;
+    --rule:   #2c2e33;
+    --card:   #1f2125;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 18px; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--serif);
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 1.25rem 5rem;
+}
+
+/* ---- Header / nav ------------------------------------------------------ */
+header.site {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+header.site .wrap {
+  padding-top: 1.6rem;
+  padding-bottom: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+}
+.site-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: var(--text);
+}
+.site-name span { color: var(--muted); font-weight: 400; }
+nav.primary {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+}
+nav.primary a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 1.1rem;
+}
+nav.primary a:first-child { margin-left: 0; }
+nav.primary a:hover,
+nav.primary a[aria-current="page"] { color: var(--accent); }
+
+/* ---- Typography -------------------------------------------------------- */
+h1, h2, h3 { line-height: 1.25; font-weight: 700; }
+h1 { font-size: 1.9rem; margin: 0 0 0.4rem; }
+h2 {
+  font-size: 1.3rem;
+  margin: 2.6rem 0 0.9rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+}
+h3 { font-size: 1.08rem; margin: 1.6rem 0 0.3rem; }
+p { margin: 0 0 1.1rem; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration: none; }
+
+.lede { font-size: 1.1rem; color: var(--muted); }
+.tagline {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 1.8rem;
+}
+
+/* ---- Utility bits ------------------------------------------------------ */
+.muted { color: var(--muted); }
+.small { font-size: 0.86rem; }
+.sans  { font-family: var(--sans); }
+
+ul.clean { list-style: none; padding: 0; margin: 0; }
+
+/* Publication / CV entries */
+.entry { margin: 0 0 1.15rem; }
+.entry .meta {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.entry .title { font-weight: 600; }
+.tag {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.05rem 0.4rem;
+  margin-left: 0.4rem;
+  vertical-align: 0.08em;
+}
+
+/* CV role blocks */
+.role { margin-bottom: 1.6rem; }
+.role .rolehead {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  align-items: baseline;
+}
+.role .where { font-weight: 700; }
+.role .when { font-family: var(--sans); font-size: 0.85rem; color: var(--muted); white-space: nowrap; }
+.role ul { margin: 0.4rem 0 0; padding-left: 1.1rem; }
+.role li { margin-bottom: 0.25rem; }
+
+/* Contact row */
+.contact {
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  margin: 1.4rem 0 0;
+}
+.contact a { margin-right: 1rem; }
+
+/* Callout for the unlisted pages */
+.note {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.95rem;
+  margin: 1.5rem 0;
+}
+
+/* Footer */
+footer.site {
+  border-top: 1px solid var(--rule);
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* Buttons / download links */
+a.button {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  text-decoration: none;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  padding: 0.35rem 0.8rem;
+  color: var(--accent);
+}
+a.button:hover { background: var(--accent); color: var(--bg); }
+
+@media (max-width: 480px) {
+  html { font-size: 17px; }
+  header.site .wrap { flex-direction: column; }
+}

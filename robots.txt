@@ -1,0 +1,8 @@
+# Allow search engines to crawl the site normally.
+# The unlisted pages (music, creative writing) are kept out of search results
+# by a "noindex" tag ON those pages, and by not linking to them anywhere public.
+# We deliberately do NOT list them here: doing so would publish their paths and
+# could stop crawlers from seeing the noindex tag. Non-linking + noindex is the
+# correct, stronger approach.
+User-agent: *
+Allow: /
