@@ -13,9 +13,19 @@
   --accent-2:  #7a2e2e;        /* reserved secondary accent */
   --rule:      #e2e0d8;        /* hairline dividers */
   --card:      #f5f4ee;
-  /* One classic serif for the whole site — deliberately plain and academic. */
-  --serif: "Times New Roman", Times, Georgia, serif;
-  --sans:  "Times New Roman", Times, Georgia, serif;
+  /* ===================================================================
+     GLOBAL FONT — change this ONE line to restyle the entire site's type.
+     Everything (headings, body, nav, labels) inherits from --font.
+     Example alternatives you can paste in place of the value:
+       Georgia, "Times New Roman", serif
+       "Iowan Old Style", Palatino, Georgia, serif
+       Helvetica, Arial, sans-serif
+     =================================================================== */
+  --font: "Times New Roman", Times, Georgia, serif;
+
+  /* These two just point at --font so older rules keep working. Leave them. */
+  --serif: var(--font);
+  --sans:  var(--font);
 }
 
 @media (prefers-color-scheme: dark) {
